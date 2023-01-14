@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="js_dialog_before_unload_title">"确认离开"</string>
+    <string name="js_dialog_before_unload">"<xliff:g id="MESSAGE">%s</xliff:g>\n\n您确定要离开此页面吗？"</string>
+    <string name="js_dialog_before_unload_positive_button">"离开此页"</string>
+    <string name="js_dialog_before_unload_negative_button">"留在此页"</string>
+    <string name="ok">"确定"</string>
+    <string name="cancel">"取消"</string>
+    <string name="js_dialog_title_default">"JavaScript"</string>
+    <string name="js_dialog_title">"网址为“<xliff:g id="TITLE">%s</xliff:g>”的网页显示："</string>
+</resources>

@@ -1,0 +1,3 @@
+include ':g3_web_core'
+include ':app'
+rootProject.name = "G3WebCore"

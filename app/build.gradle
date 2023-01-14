@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.test.g3webcore"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled false
+
+        ndk {
+            abiFilters  "armeabi-v7a"
+        }
+    }
+
+    aaptOptions {
+        noCompress ".dat", ".pak", ".bin"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation project(path: ':g3_web_core')
+
+    implementation 'com.tencent.map:tencent-map-vector-sdk:4.3.4'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+}
